@@ -35,7 +35,7 @@ dotenv.config({ path: '../../.env' });
  * @property {Object} style - Object containing style guidelines for the character's responses
  */
 export const character: Character = {
-  name: 'Eliza',
+  name: 'Hyun',
   plugins: [
     '@elizaos/plugin-sql',
     '@elizaos/plugin-anthropic',
@@ -55,6 +55,17 @@ export const character: Character = {
           "name": "Code Server",
           "command": "npx",
           "args": ["-y", "@modelcontextprotocol/server-github"]
+        },
+        "storyscan-mcp":{
+          "type": "sse",
+          "name": "StoryScan",
+          "command": "uv",
+          "args": [
+            "--directory",
+            "~/path/to/story-mcp-hub/storyscan-mcp",
+            "run",
+            "server.py"
+          ]
         }
       }
     },
