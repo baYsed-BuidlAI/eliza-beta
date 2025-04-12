@@ -46,7 +46,7 @@ export const character: Character = {
           "command": "uv",
           "args": [
             "--directory",
-            "/home/lyeoul/baYsed/story-mcp-hub/storyscan-mcp",
+            "../../../story-mcp-hub/storyscan-mcp",
             "run",
             "server.py"
           ]
@@ -57,7 +57,7 @@ export const character: Character = {
           "command": "uv",
           "args": [
             "--directory",
-            "/home/lyeoul/baYsed/story-mcp-hub/story-sdk-mcp",
+            "../../../story-mcp-hub/story-sdk-mcp",
             "run",
             "server.py"
           ]
