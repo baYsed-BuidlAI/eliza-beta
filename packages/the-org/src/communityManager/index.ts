@@ -48,27 +48,6 @@ export const character: Character = {
     '@fleek-platform/eliza-plugin-mcp'
   ],
   settings: {
-    "mcp": {
-      "servers": {
-        "github": {
-          "type": "stdio",
-          "name": "Code Server",
-          "command": "npx",
-          "args": ["-y", "@modelcontextprotocol/server-github"]
-        },
-        "storyscan-mcp":{
-          "type": "sse",
-          "name": "StoryScan",
-          "command": "uv",
-          "args": [
-            "--directory",
-            "~/path/to/story-mcp-hub/storyscan-mcp",
-            "run",
-            "server.py"
-          ]
-        }
-      }
-    },
     secrets: {
       DISCORD_APPLICATION_ID: process.env.COMMUNITY_MANAGER_DISCORD_APPLICATION_ID,
       DISCORD_API_TOKEN: process.env.COMMUNITY_MANAGER_DISCORD_API_TOKEN,
