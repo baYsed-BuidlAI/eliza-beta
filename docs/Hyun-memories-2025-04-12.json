@@ -1,0 +1,173 @@
+[
+  {
+    "id": "8e1da779-3b69-4fd6-bd6b-b1672caa7124",
+    "type": "messages",
+    "createdAt": 1744475619553,
+    "content": {
+      "text": "Hello! How can I assist you today?",
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "thought": "The user greeted me directly with 'hello', so I should respond briefly and kindly.",
+      "inReplyTo": "5ad90a44-e9c9-46d1-9ae1-4502981b8c3a",
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "bea4ec97-6c13-4ad7-a578-7caa44b51ed4",
+    "type": "messages",
+    "createdAt": 1744475619534,
+    "content": {
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "message": "Hello! How can I assist you today?",
+      "thought": "The user greeted me directly with 'hello', so I should respond briefly and kindly.",
+      "inReplyTo": "5ad90a44-e9c9-46d1-9ae1-4502981b8c3a",
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "5ad90a44-e9c9-46d1-9ae1-4502981b8c3a",
+    "type": "messages",
+    "createdAt": 1744475615766,
+    "content": {
+      "text": "hello",
+      "source": "client_chat:user"
+    },
+    "entityId": "058047fc-face-0f72-8c4a-282524feb947",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {
+      "entityName": "user"
+    }
+  },
+  {
+    "id": "b5397bab-eab9-4bc9-984a-d12b1958e381",
+    "type": "messages",
+    "createdAt": 1744458450392,
+    "content": {
+      "text": "솔라나 슈퍼팀은 Payment, 게임, AI 에이전트, 모바일 기술에 중점을 두고 있습니다. 특히 빠른 트랜잭션과 낮은 수수료를 활용해 글로벌 결제와 같은 분야에서 혁신을 추구하고 있어요.",
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "thought": "The user is asking about the priorities of Solana Superteam. I should provide concise information from the knowledge base.",
+      "inReplyTo": "82256612-9a57-4393-bc84-ba83563efb75",
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "22c1cc03-7fd2-47e0-a4fa-31738bdcedb1",
+    "type": "messages",
+    "createdAt": 1744458450248,
+    "content": {
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "message": "솔라나 슈퍼팀은 Payment, 게임, AI 에이전트, 모바일 기술에 중점을 두고 있습니다. 특히 빠른 트랜잭션과 낮은 수수료를 활용해 글로벌 결제와 같은 분야에서 혁신을 추구하고 있어요.",
+      "thought": "The user is asking about the priorities of Solana Superteam. I should provide concise information from the knowledge base.",
+      "inReplyTo": "82256612-9a57-4393-bc84-ba83563efb75",
+      "providers": [
+        "KNOWLEDGE"
+      ],
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "82256612-9a57-4393-bc84-ba83563efb75",
+    "type": "messages",
+    "createdAt": 1744458444318,
+    "content": {
+      "text": "솔라나 슈퍼팀이 중요하게 생각하는거에 대해 알려줘",
+      "source": "client_chat:user"
+    },
+    "entityId": "058047fc-face-0f72-8c4a-282524feb947",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {
+      "entityName": "user"
+    }
+  },
+  {
+    "id": "6adfc587-685c-4a65-95da-ee09e97f2021",
+    "type": "messages",
+    "createdAt": 1744458399334,
+    "content": {
+      "text": "안녕하세요!",
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "thought": "The user greeted me in Korean, which is a direct engagement. I should respond briefly and kindly.",
+      "inReplyTo": "7407b8c3-15fa-4537-950d-2391a3b42dd1",
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "4a03197d-1bfe-463b-8238-fc2169c66631",
+    "type": "messages",
+    "createdAt": 1744458399244,
+    "content": {
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "message": "안녕하세요!",
+      "thought": "The user greeted me in Korean, which is a direct engagement. I should respond briefly and kindly.",
+      "inReplyTo": "7407b8c3-15fa-4537-950d-2391a3b42dd1",
+      "channelType": "dm"
+    },
+    "entityId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "7407b8c3-15fa-4537-950d-2391a3b42dd1",
+    "type": "messages",
+    "createdAt": 1744458395163,
+    "content": {
+      "text": "안녕",
+      "source": "client_chat:user"
+    },
+    "entityId": "058047fc-face-0f72-8c4a-282524feb947",
+    "agentId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "roomId": "fad10f4c-3b52-04fa-a3f1-30ebb47fb6a6",
+    "unique": true,
+    "metadata": {
+      "entityName": "user"
+    }
+  }
+]

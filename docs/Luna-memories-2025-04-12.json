@@ -1,0 +1,59 @@
+[
+  {
+    "id": "51396d41-55fe-4274-ba0c-c55005697364",
+    "type": "messages",
+    "createdAt": 1744483061056,
+    "content": {
+      "text": "안녕! 어떻게 도와드릴까요?",
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "thought": "The user greeted me. Since it's directly addressed to me, I should respond briefly.",
+      "inReplyTo": "782b829e-672f-4c9f-87d1-c5bc64b50f3d",
+      "channelType": "dm"
+    },
+    "entityId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "agentId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "roomId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "5f84ca3a-ccff-47da-a976-6fe83b71c297",
+    "type": "messages",
+    "createdAt": 1744483061032,
+    "content": {
+      "source": "client_chat:agent",
+      "actions": [
+        "REPLY"
+      ],
+      "message": "안녕! 어떻게 도와드릴까요?",
+      "thought": "The user greeted me. Since it's directly addressed to me, I should respond briefly.",
+      "inReplyTo": "782b829e-672f-4c9f-87d1-c5bc64b50f3d",
+      "providers": [],
+      "channelType": "dm"
+    },
+    "entityId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "agentId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "roomId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "unique": true,
+    "metadata": {}
+  },
+  {
+    "id": "782b829e-672f-4c9f-87d1-c5bc64b50f3d",
+    "type": "messages",
+    "createdAt": 1744483056300,
+    "content": {
+      "text": "안녕 루나야",
+      "source": "client_chat:user"
+    },
+    "entityId": "b18f9ee2-07c4-0cfd-8147-e14b7b9fe9b5",
+    "agentId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "roomId": "baaf10f1-b483-0977-a616-3141ffd45a62",
+    "unique": true,
+    "metadata": {
+      "entityName": "user"
+    }
+  }
+]
