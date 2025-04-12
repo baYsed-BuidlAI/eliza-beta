@@ -85,10 +85,10 @@ export function AppSidebar() {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
-                <NavLink to="/" className="px-6 py-2 h-full">
+                <NavLink to="/" className="px-4 py-2 h-full">
                   <div className="flex flex-col pt-2 gap-1 items-start justify-center">
-                    <img alt="elizaos-logo" src="/elizaos-logo-light.png" width="90%" />
-                    <span className="text-xs font-mono text-muted-foreground text-center">
+                    <img alt="baysed-logo" src="/baysed-logo-light.png" width="100%" />
+                    <span className="text-xs font-mono text-muted-foreground text-center ml-2">
                       v{info?.version}
                     </span>
                   </div>

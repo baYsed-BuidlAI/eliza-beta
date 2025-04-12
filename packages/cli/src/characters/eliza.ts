@@ -16,7 +16,7 @@ dotenv.config({ path: '../../.env' });
  * @property {Object} style - Object containing guidelines for communication style
  */
 export const character: Character = {
-  name: 'Hyun',
+  name: 'Luna',
   plugins: [
     '@elizaos/plugin-sql',
     '@fleek-platform/eliza-plugin-mcp',
