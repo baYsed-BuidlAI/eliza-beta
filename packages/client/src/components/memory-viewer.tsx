@@ -357,25 +357,36 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
       // JSON 문자열로 변환
       const jsonData = JSON.stringify(filteredMemories, null, 2);
       
-      // Blob 생성
+      // Base64로 인코딩
+      const base64Data = btoa(jsonData);
+      
+      // 콘솔에 출력
+      console.log("Base64 encoded data:");
+      console.log(base64Data);
+      
+      // 클립보드에 base64 데이터 복사
+      navigator.clipboard.writeText(base64Data).then(() => {
+        // 클립보드 복사 성공 시 토스트 표시
+        toast({
+          // 영어
+          title: 'Base64 data copied',
+          description: 'Base64 encoded data copied to clipboard',
+        });
+      });
+      
+      // 기존 내보내기 기능도 유지
       const blob = new Blob([jsonData], { type: 'application/json' });
-      
-      // 다운로드 URL 생성
       const url = URL.createObjectURL(blob);
-      
-      // 다운로드 링크 생성 및 클릭
       const link = document.createElement('a');
       const fileName = `${agentName}-memories-${new Date().toISOString().split('T')[0]}.json`;
       link.href = url;
       link.download = fileName;
       link.click();
-      
-      // 자원 정리
       URL.revokeObjectURL(url);
       
       toast({
         title: 'Export Successful',
-        description: `${filteredMemories.length} memories saved to ${fileName}`,
+        description: `${filteredMemories.length} memories saved to ${fileName} and Base64 copied to clipboard`,
       });
     } catch (error) {
       console.error('Error exporting memories:', error);
