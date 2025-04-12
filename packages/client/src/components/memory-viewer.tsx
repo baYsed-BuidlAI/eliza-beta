@@ -355,15 +355,11 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
   const exportMemories = () => {
     try {
       // JSON 문자열로 변환
-      const jsonData = JSON.stringify(filteredMemories, null, 2);
+      const jsonData = JSON.stringify(filteredMemories, null, 0);
       
       // 클립보드에 base64 데이터 복사
-      navigator.clipboard.writeText(`call mcp
-upload_file_and_create_ip
-
-file_stream: "${jsonData}"
-
-ip_tag: "memory"`).then(() => {
+      navigator.clipboard.writeText(`mcp call
+        { "serverName": "story-sdk-mcp", "toolName": "upload_file_and_create_ip", "arguments": { "file_stream": "${jsonData}", "ip_tag": "memory" } }`).then(() => {
         // 클립보드 복사 성공 시 토스트 표시
         toast({
           // 영어
