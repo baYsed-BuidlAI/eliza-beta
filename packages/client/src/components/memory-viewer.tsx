@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 
 import type { Memory } from '@elizaos/core';
 import MemoryEditOverlay from './memory-edit-overlay';
+import { useToast } from '../hooks/use-toast';
 
 // Number of items to load per batch
 const ITEMS_PER_PAGE = 10;
@@ -49,6 +50,7 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
   const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
   const [loadingMore, setLoadingMore] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
 
   console.log({ agentName, agentId });
 
@@ -339,6 +341,42 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
     );
   };
 
+  // Export memories to a JSON file
+  const exportMemories = () => {
+    try {
+      // JSON 문자열로 변환
+      const jsonData = JSON.stringify(filteredMemories, null, 2);
+      
+      // Blob 생성
+      const blob = new Blob([jsonData], { type: 'application/json' });
+      
+      // 다운로드 URL 생성
+      const url = URL.createObjectURL(blob);
+      
+      // 다운로드 링크 생성 및 클릭
+      const link = document.createElement('a');
+      const fileName = `${agentName}-memories-${new Date().toISOString().split('T')[0]}.json`;
+      link.href = url;
+      link.download = fileName;
+      link.click();
+      
+      // 자원 정리
+      URL.revokeObjectURL(url);
+      
+      toast({
+        title: '내보내기 성공',
+        description: `${filteredMemories.length}개의 메모리가 ${fileName}으로 저장되었습니다.`,
+      });
+    } catch (error) {
+      console.error('Error exporting memories:', error);
+      toast({
+        title: '내보내기 실패',
+        description: '메모리를 내보내는 중 오류가 발생했습니다.',
+        variant: 'destructive',
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col h-[calc(100vh-100px)] min-h-[400px] w-full">
       <div className="flex flex-col gap-2 mb-4 px-4 pt-4 flex-none border-b pb-3">
@@ -368,7 +406,7 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
           </Select>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="flex items-center gap-1">
+          <Button variant="outline" size="sm" className="flex items-center gap-1" onClick={exportMemories}>
             <Share className="h-4 w-4" />
             Export Memories
           </Button>
