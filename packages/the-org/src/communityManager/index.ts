@@ -45,8 +45,19 @@ export const character: Character = {
     '@elizaos/plugin-pdf',
     '@elizaos/plugin-video-understanding',
     '@elizaos/plugin-bootstrap',
+    '@fleek-platform/eliza-plugin-mcp'
   ],
   settings: {
+    "mcp": {
+      "servers": {
+        "github": {
+          "type": "stdio",
+          "name": "Code Server",
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-github"]
+        }
+      }
+    },
     secrets: {
       DISCORD_APPLICATION_ID: process.env.COMMUNITY_MANAGER_DISCORD_APPLICATION_ID,
       DISCORD_API_TOKEN: process.env.COMMUNITY_MANAGER_DISCORD_API_TOKEN,
