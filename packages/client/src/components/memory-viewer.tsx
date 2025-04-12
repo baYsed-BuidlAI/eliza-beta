@@ -1,5 +1,5 @@
 import type { UUID } from '@elizaos/core';
-import { Database, LoaderIcon, MailCheck, MessageSquareShare, Pencil } from 'lucide-react';
+import { Database, LoaderIcon, MailCheck, MessageSquareShare, Pencil, Download, Share } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAgentMemories, useDeleteMemory } from '../hooks/use-query-hooks';
 import { Badge } from './ui/badge';
@@ -341,31 +341,41 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
 
   return (
     <div className="flex flex-col h-[calc(100vh-100px)] min-h-[400px] w-full">
-      <div className="flex justify-between items-center mb-4 px-4 pt-4 flex-none border-b pb-3">
-        <div className="flex items-center gap-2">
-          <h3 className="text-lg font-medium">Memories</h3>
-          {!isLoading && (
-            <Badge variant="secondary" className="ml-2">
-              {filteredMemories.length} memories
-            </Badge>
-          )}
+      <div className="flex flex-col gap-2 mb-4 px-4 pt-4 flex-none border-b pb-3">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <h3 className="text-lg font-medium">Memories</h3>
+            {!isLoading && (
+              <Badge variant="secondary" className="ml-2">
+                {filteredMemories.length} memories
+              </Badge>
+            )}
+          </div>
+          <Select
+              value={selectedType}
+              onValueChange={(value) => setSelectedType(value as MemoryType)}
+            >
+              <SelectTrigger className="w-40">
+                <SelectValue placeholder="Filter memories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value={MemoryType.all}>All Messages</SelectItem>
+                <SelectItem value={MemoryType.messagesSent}>Agent Messages</SelectItem>
+                <SelectItem value={MemoryType.messagesReceived}>User Messages</SelectItem>
+                <SelectItem value={MemoryType.thoughts}>With Thoughts</SelectItem>
+                <SelectItem value={MemoryType.facts}>Facts</SelectItem>
+              </SelectContent>
+          </Select>
         </div>
         <div className="flex items-center gap-2">
-          <Select
-            value={selectedType}
-            onValueChange={(value) => setSelectedType(value as MemoryType)}
-          >
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="Filter memories" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value={MemoryType.all}>All Messages</SelectItem>
-              <SelectItem value={MemoryType.messagesSent}>Agent Messages</SelectItem>
-              <SelectItem value={MemoryType.messagesReceived}>User Messages</SelectItem>
-              <SelectItem value={MemoryType.thoughts}>With Thoughts</SelectItem>
-              <SelectItem value={MemoryType.facts}>Facts</SelectItem>
-            </SelectContent>
-          </Select>
+          <Button variant="outline" size="sm" className="flex items-center gap-1">
+            <Share className="h-4 w-4" />
+            Export Memories
+          </Button>
+          <Button variant="outline" size="sm" className="flex items-center gap-1">
+            <Download className="h-4 w-4" />
+            Import Memories
+          </Button>
         </div>
       </div>
       <div

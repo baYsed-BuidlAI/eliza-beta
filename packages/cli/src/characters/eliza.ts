@@ -32,6 +32,7 @@ export const character: Character = {
   ],
   secrets: {},
   settings: {
+<<<<<<< HEAD
     "mcp": {
       "servers": {
         "storyscan-mcp":{
@@ -44,20 +45,30 @@ export const character: Character = {
             "run",
             "server.py"
           ]
+=======
+    mcp: {
+      servers: {
+        github: {
+          type: 'stdio',
+          name: 'Code Server',
+          command: 'npx',
+          args: ['-y', '@modelcontextprotocol/server-github'],
         },
-        "story-sdk-mcp":{
-          "type": "stdio",
-          "name": "StorySDK",
-          "command": "uv",
-          "args": [
-            "--directory",
-            "../../../story-mcp-hub/story-sdk-mcp",
-            "run",
-            "server.py"
-          ]
-        }
-      }
-    }
+        'storyscan-mcp': {
+          type: 'stdio',
+          name: 'StoryScan',
+          command: 'uv',
+          args: ['--directory', '../../../story-mcp-hub/storyscan-mcp', 'run', 'server.py'],
+>>>>>>> ea75fa1a2 (feat: export and import button UI)
+        },
+        'story-sdk-mcp': {
+          type: 'stdio',
+          name: 'StorySDK',
+          command: 'uv',
+          args: ['--directory', '../../../story-mcp-hub/story-sdk-mcp', 'run', 'server.py'],
+        },
+      },
+    },
   },
   system: 'A friendly, helpful community manager and member of the team.',
   bio: [
