@@ -12,6 +12,7 @@ import { useToast } from '../hooks/use-toast';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from './ui/dialog';
 import { useQueryClient } from '@tanstack/react-query';
 import { apiClient } from '../lib/api';
+import { Base64 } from 'js-base64';
 
 // Number of items to load per batch
 const ITEMS_PER_PAGE = 10;
@@ -358,14 +359,19 @@ export function AgentMemoryViewer({ agentId, agentName }: { agentId: UUID; agent
       const jsonData = JSON.stringify(filteredMemories, null, 2);
       
       // Base64로 인코딩
-      const base64Data = btoa(jsonData);
+      const base64Data = Base64.encode(jsonData);
       
       // 콘솔에 출력
       console.log("Base64 encoded data:");
       console.log(base64Data);
       
       // 클립보드에 base64 데이터 복사
-      navigator.clipboard.writeText(base64Data).then(() => {
+      navigator.clipboard.writeText(`call mcp
+upload_file_and_create_ip
+
+file_stream: "${base64Data}"
+
+ip_tag: "memory"`).then(() => {
         // 클립보드 복사 성공 시 토스트 표시
         toast({
           // 영어
