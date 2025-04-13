@@ -80,7 +80,7 @@ Here’s what’s coming next:
 
 you must set up the `.env` file in `luna` and `story-mcp-hub/story-sdk-mcp`, `story-mcp-hub/storyscan-mcp`
 
-in story-mcp-hub use venv and install dependencies
+in `story-mcp-hub` use venv and install dependencies
 ```bash
 cd story-mcp-hub
 python3.13 -m venv venv
