@@ -1,0 +1,8 @@
+name: token-exchange-rootstock
+solidity:
+  version: 0.8.18
+  evm_version: paris
+
+plugins:
+  - name: solidity
+  - name: rootstock
